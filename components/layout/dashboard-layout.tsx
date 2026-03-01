@@ -6,11 +6,17 @@ import { Header } from "./header";
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+    <div className="min-h-screen bg-background font-sans text-foreground">
       <div className="flex h-screen overflow-hidden">
-        <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+        <Sidebar 
+          open={sidebarOpen} 
+          setOpen={setSidebarOpen} 
+          collapsed={sidebarCollapsed} 
+          setCollapsed={setSidebarCollapsed} 
+        />
         
         <div className="flex flex-1 flex-col overflow-hidden">
           <Header setSidebarOpen={setSidebarOpen} />

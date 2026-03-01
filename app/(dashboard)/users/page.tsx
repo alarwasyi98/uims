@@ -26,9 +26,9 @@ export default function UsersPage() {
   if (currentUser.role !== "Kepala Sekolah") {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] text-center">
-        <Shield className="h-16 w-16 text-slate-300 mb-4" />
-        <h2 className="text-2xl font-bold text-slate-900 mb-2">Akses Ditolak</h2>
-        <p className="text-slate-500 max-w-md">
+        <Shield className="h-16 w-16 text-muted mb-4" />
+        <h2 className="text-2xl font-bold text-foreground mb-2">Akses Ditolak</h2>
+        <p className="text-muted-foreground max-w-md">
           Anda tidak memiliki izin untuk mengakses halaman Manajemen User. Halaman ini hanya untuk Kepala Sekolah.
         </p>
       </div>
@@ -60,11 +60,11 @@ export default function UsersPage() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">Manajemen User</h1>
-          <p className="text-sm text-slate-500">Kelola akses pengguna sistem</p>
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">Manajemen User</h1>
+          <p className="text-sm text-muted-foreground">Kelola akses pengguna sistem</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Plus className="mr-2 h-4 w-4" />
             Tambah User
           </Button>
@@ -75,11 +75,11 @@ export default function UsersPage() {
         <CardHeader className="pb-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="relative max-w-sm w-full">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-400" />
+              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <input
                 type="text"
                 placeholder="Cari nama atau email..."
-                className="w-full rounded-md border border-slate-200 bg-white pl-9 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full rounded-md border border-input bg-background pl-9 pr-4 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -87,7 +87,7 @@ export default function UsersPage() {
             <div className="flex items-center gap-2">
               <div className="relative">
                 <select
-                  className="appearance-none rounded-md border border-slate-200 bg-white pl-3 pr-8 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="appearance-none rounded-md border border-input bg-background pl-3 pr-8 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                   value={roleFilter}
                   onChange={(e) => setRoleFilter(e.target.value)}
                 >
@@ -96,7 +96,7 @@ export default function UsersPage() {
                   <option value="Staf Keuangan">Staf Keuangan</option>
                   <option value="Guru">Guru</option>
                 </select>
-                <Filter className="absolute right-2.5 top-2.5 h-4 w-4 text-slate-400 pointer-events-none" />
+                <Filter className="absolute right-2.5 top-2.5 h-4 w-4 text-muted-foreground pointer-events-none" />
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function UsersPage() {
         <CardContent>
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
-              <thead className="text-xs text-slate-500 uppercase bg-slate-50 border-b border-slate-200">
+              <thead className="text-xs text-muted-foreground uppercase bg-muted border-b border-border">
                 <tr>
                   <th className="px-4 py-3 font-medium">Pengguna</th>
                   <th className="px-4 py-3 font-medium">Role</th>
@@ -116,10 +116,10 @@ export default function UsersPage() {
               <tbody>
                 {filteredUsers.length > 0 ? (
                   filteredUsers.map((u) => (
-                    <tr key={u.id} className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
+                    <tr key={u.id} className="border-b border-border hover:bg-muted/50 transition-colors">
                       <td className="px-4 py-3">
-                        <div className="font-medium text-slate-900">{u.nama}</div>
-                        <div className="text-xs text-slate-500">{u.email}</div>
+                        <div className="font-medium text-foreground">{u.nama}</div>
+                        <div className="text-xs text-muted-foreground">{u.email}</div>
                       </td>
                       <td className="px-4 py-3">
                         <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
@@ -130,7 +130,7 @@ export default function UsersPage() {
                           {u.role}
                         </span>
                       </td>
-                      <td className="px-4 py-3 text-slate-600">
+                      <td className="px-4 py-3 text-muted-foreground">
                         {getUnitNames(u.unit_access_ids)}
                       </td>
                       <td className="px-4 py-3">
@@ -150,14 +150,14 @@ export default function UsersPage() {
                           </DropdownMenuTrigger>
                           <DropdownMenuContent align="end">
                             <DropdownMenuLabel>Aksi</DropdownMenuLabel>
-                            <DropdownMenuItem className="text-blue-600">
+                            <DropdownMenuItem className="text-primary">
                               <Edit className="mr-2 h-4 w-4" /> Edit Akses
                             </DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem className={u.active ? "text-amber-600" : "text-emerald-600"}>
                               <Shield className="mr-2 h-4 w-4" /> {u.active ? 'Nonaktifkan' : 'Aktifkan'}
                             </DropdownMenuItem>
-                            <DropdownMenuItem className="text-red-600">
+                            <DropdownMenuItem className="text-destructive">
                               <Trash2 className="mr-2 h-4 w-4" /> Hapus
                             </DropdownMenuItem>
                           </DropdownMenuContent>
@@ -167,9 +167,9 @@ export default function UsersPage() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={5} className="px-4 py-8 text-center text-slate-500">
+                    <td colSpan={5} className="px-4 py-8 text-center text-muted-foreground">
                       <div className="flex flex-col items-center justify-center">
-                        <UserCog className="h-8 w-8 text-slate-300 mb-2" />
+                        <UserCog className="h-8 w-8 text-muted mb-2" />
                         <p>Tidak ada pengguna yang ditemukan.</p>
                       </div>
                     </td>
@@ -178,7 +178,7 @@ export default function UsersPage() {
               </tbody>
             </table>
           </div>
-          <div className="flex items-center justify-between mt-4 text-sm text-slate-500">
+          <div className="flex items-center justify-between mt-4 text-sm text-muted-foreground">
             <div>Menampilkan {filteredUsers.length} pengguna</div>
             <div className="flex gap-1">
               <Button variant="outline" size="sm" disabled>Sebelumnya</Button>

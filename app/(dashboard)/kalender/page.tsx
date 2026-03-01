@@ -106,8 +106,8 @@ export default function KalenderPage() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">Kalender Kegiatan</h1>
-          <p className="text-sm text-slate-500">Jadwal dan acara akademik untuk {activeUnit.nama}</p>
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">Kalender Kegiatan</h1>
+          <p className="text-sm text-muted-foreground">Jadwal dan acara akademik untuk {activeUnit.nama}</p>
         </div>
         <div className="flex items-center gap-2">
           <Button 
@@ -115,13 +115,13 @@ export default function KalenderPage() {
             size="sm" 
             onClick={handleSync}
             disabled={isSyncing}
-            className="hidden sm:flex bg-white"
+            className="hidden sm:flex bg-background"
           >
             <RefreshCw className={`mr-2 h-4 w-4 ${isSyncing ? "animate-spin" : ""}`} />
             {isSyncing ? "Menyinkronkan..." : "Sync Google Kalender"}
           </Button>
           {(currentUser.role === "Kepala Sekolah" || currentUser.role === "Guru") && (
-            <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Plus className="mr-2 h-4 w-4" />
               Tambah Kegiatan
             </Button>
@@ -132,7 +132,7 @@ export default function KalenderPage() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="lg:col-span-3">
           <Card className="h-full">
-            <CardHeader className="pb-4 border-b border-slate-100 flex flex-row items-center justify-between">
+            <CardHeader className="pb-4 border-b border-border flex flex-row items-center justify-between">
               <div className="flex items-center gap-4">
                 <CardTitle className="text-lg font-semibold">
                   {format(currentDate, "MMMM yyyy", { locale: id })}
@@ -145,16 +145,16 @@ export default function KalenderPage() {
               </div>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="grid grid-cols-7 border-b border-slate-100 bg-slate-50/50">
+              <div className="grid grid-cols-7 border-b border-border bg-muted/50">
                 {weekDays.map(day => (
-                  <div key={day} className="py-2 text-center text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  <div key={day} className="py-2 text-center text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                     {day}
                   </div>
                 ))}
               </div>
               <div className="grid grid-cols-7 auto-rows-[120px]">
                 {paddingDays.map(i => (
-                  <div key={`pad-${i}`} className="border-b border-r border-slate-100 bg-slate-50/30 p-2" />
+                  <div key={`pad-${i}`} className="border-b border-r border-border bg-muted/30 p-2" />
                 ))}
                 
                 {days.map((day, i) => {
@@ -165,11 +165,11 @@ export default function KalenderPage() {
                   return (
                     <div 
                       key={day.toString()} 
-                      className={`border-b border-r border-slate-100 p-2 overflow-y-auto ${!isCurrentMonth ? "bg-slate-50/50 text-slate-400" : "bg-white"}`}
+                      className={`border-b border-r border-border p-2 overflow-y-auto ${!isCurrentMonth ? "bg-muted/50 text-muted-foreground" : "bg-background"}`}
                     >
                       <div className="flex justify-between items-start">
                         <span className={`text-sm font-medium h-7 w-7 flex items-center justify-center rounded-full ${
-                          isTodayDate ? "bg-blue-600 text-white" : "text-slate-700"
+                          isTodayDate ? "bg-primary text-primary-foreground" : "text-foreground"
                         }`}>
                           {format(day, dateFormat)}
                         </span>
@@ -178,7 +178,7 @@ export default function KalenderPage() {
                         {dayEvents.map(event => (
                           <div 
                             key={event.id} 
-                            className="text-xs p-1 rounded bg-slate-50 border border-slate-100 truncate cursor-pointer hover:bg-slate-100 transition-colors group relative"
+                            className="text-xs p-1 rounded bg-muted border border-border truncate cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors group relative"
                             title={event.title}
                           >
                             <div className="flex items-center gap-1.5">
@@ -206,7 +206,7 @@ export default function KalenderPage() {
               <div className="space-y-2">
                 <div className="relative">
                   <select
-                    className="w-full appearance-none rounded-md border border-slate-200 bg-white pl-3 pr-8 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full appearance-none rounded-md border border-input bg-background pl-3 pr-8 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                     value={statusFilter}
                     onChange={(e) => setStatusFilter(e.target.value)}
                   >
@@ -216,7 +216,7 @@ export default function KalenderPage() {
                     <option value="Selesai">Selesai</option>
                     <option value="Dibatalkan">Dibatalkan</option>
                   </select>
-                  <Filter className="absolute right-2.5 top-2.5 h-4 w-4 text-slate-400 pointer-events-none" />
+                  <Filter className="absolute right-2.5 top-2.5 h-4 w-4 text-muted-foreground pointer-events-none" />
                 </div>
               </div>
             </CardContent>
@@ -233,12 +233,12 @@ export default function KalenderPage() {
                   .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
                   .slice(0, 5)
                   .map(event => (
-                    <div key={event.id} className="flex flex-col gap-1 pb-3 border-b border-slate-100 last:border-0 last:pb-0">
+                    <div key={event.id} className="flex flex-col gap-1 pb-3 border-b border-border last:border-0 last:pb-0">
                       <div className="flex items-start justify-between">
-                        <p className="text-sm font-medium text-slate-900 leading-tight">{event.title}</p>
+                        <p className="text-sm font-medium text-foreground leading-tight">{event.title}</p>
                       </div>
                       <div className="flex items-center justify-between mt-1">
-                        <div className="flex items-center text-xs text-slate-500">
+                        <div className="flex items-center text-xs text-muted-foreground">
                           <CalendarIcon className="mr-1 h-3 w-3" />
                           {format(parseISO(event.date), "dd MMM yyyy", { locale: id })} • {event.time}
                         </div>
@@ -249,7 +249,7 @@ export default function KalenderPage() {
                     </div>
                   ))}
                 {filteredEvents.filter(e => e.type === "Direncanakan" || e.type === "Berlangsung").length === 0 && (
-                  <div className="text-sm text-slate-500 text-center py-4">
+                  <div className="text-sm text-muted-foreground text-center py-4">
                     Tidak ada kegiatan mendatang.
                   </div>
                 )}

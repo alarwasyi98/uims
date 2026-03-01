@@ -57,8 +57,8 @@ export default function DashboardPage() {
       className="space-y-6"
     >
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900">Dashboard</h1>
-        <p className="text-sm text-slate-500">Ringkasan data untuk {activeUnit.nama}</p>
+        <h1 className="text-2xl font-bold tracking-tight text-foreground">Dashboard</h1>
+        <p className="text-sm text-muted-foreground">Ringkasan data untuk {activeUnit.nama}</p>
       </div>
 
       {/* Summary Cards */}
@@ -66,55 +66,55 @@ export default function DashboardPage() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center justify-between space-y-0 pb-2">
-              <p className="text-sm font-medium text-slate-500">Siswa Aktif</p>
-              <Users className="h-4 w-4 text-blue-600" />
+              <p className="text-sm font-medium text-muted-foreground">Siswa Aktif</p>
+              <Users className="h-4 w-4 text-primary" />
             </div>
-            <div className="text-2xl font-bold text-slate-900">{activeStudents}</div>
-            <p className="text-xs text-emerald-600 font-medium mt-1">+2% dari bulan lalu</p>
+            <div className="text-2xl font-bold text-foreground">{activeStudents}</div>
+            <p className="text-xs text-muted-foreground font-medium mt-1">+2% dari bulan lalu</p>
           </CardContent>
         </Card>
         
         <Card className="xl:col-span-2">
           <CardContent className="p-6">
             <div className="flex items-center justify-between space-y-0 pb-2">
-              <p className="text-sm font-medium text-slate-500">Pemasukan SPP (Januari)</p>
-              <CreditCard className="h-4 w-4 text-emerald-600" />
+              <p className="text-sm font-medium text-muted-foreground">Pemasukan SPP (Januari)</p>
+              <CreditCard className="h-4 w-4 text-primary" />
             </div>
-            <div className="text-2xl font-bold text-slate-900">{formatRupiah(totalSppIncome)}</div>
-            <p className="text-xs text-emerald-600 font-medium mt-1">+15% dari bulan lalu</p>
+            <div className="text-2xl font-bold text-foreground">{formatRupiah(totalSppIncome)}</div>
+            <p className="text-xs text-muted-foreground font-medium mt-1">+15% dari bulan lalu</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center justify-between space-y-0 pb-2">
-              <p className="text-sm font-medium text-slate-500">Kehadiran</p>
-              <UserCheck className="h-4 w-4 text-blue-600" />
+              <p className="text-sm font-medium text-muted-foreground">Kehadiran</p>
+              <UserCheck className="h-4 w-4 text-primary" />
             </div>
-            <div className="text-2xl font-bold text-slate-900">96.5%</div>
-            <p className="text-xs text-slate-500 mt-1">Rata-rata bulan ini</p>
+            <div className="text-2xl font-bold text-foreground">96.5%</div>
+            <p className="text-xs text-muted-foreground mt-1">Rata-rata bulan ini</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center justify-between space-y-0 pb-2">
-              <p className="text-sm font-medium text-slate-500">Guru Aktif</p>
-              <GraduationCap className="h-4 w-4 text-blue-600" />
+              <p className="text-sm font-medium text-muted-foreground">Guru Aktif</p>
+              <GraduationCap className="h-4 w-4 text-primary" />
             </div>
-            <div className="text-2xl font-bold text-slate-900">{activeTeachers}</div>
-            <p className="text-xs text-slate-500 mt-1">Total pengajar</p>
+            <div className="text-2xl font-bold text-foreground">{activeTeachers}</div>
+            <p className="text-xs text-muted-foreground mt-1">Total pengajar</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center justify-between space-y-0 pb-2">
-              <p className="text-sm font-medium text-slate-500">PPDB Aktif</p>
-              <UserPlus className="h-4 w-4 text-blue-600" />
+              <p className="text-sm font-medium text-muted-foreground">PPDB Aktif</p>
+              <UserPlus className="h-4 w-4 text-primary" />
             </div>
-            <div className="text-2xl font-bold text-slate-900">{activePpdb}</div>
-            <p className="text-xs text-slate-500 mt-1">Menunggu verifikasi</p>
+            <div className="text-2xl font-bold text-foreground">{activePpdb}</div>
+            <p className="text-xs text-muted-foreground mt-1">Menunggu verifikasi</p>
           </CardContent>
         </Card>
       </div>
@@ -142,7 +142,7 @@ export default function DashboardPage() {
                     formatter={(value: number) => [formatRupiah(value), "Pemasukan"]}
                     contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                   />
-                  <Line type="monotone" dataKey="total" stroke="#1d4ed8" strokeWidth={3} dot={{ r: 4, fill: '#1d4ed8', strokeWidth: 0 }} activeDot={{ r: 6, strokeWidth: 0 }} />
+                  <Line type="monotone" dataKey="total" stroke="var(--color-primary)" strokeWidth={3} dot={{ r: 4, fill: 'var(--color-primary)', strokeWidth: 0 }} activeDot={{ r: 6, strokeWidth: 0 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -154,24 +154,24 @@ export default function DashboardPage() {
             <CardTitle className="text-base font-semibold">Ringkasan Tunggakan SPP</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="mb-6 flex items-center justify-between rounded-lg border border-amber-200 bg-amber-50 p-4">
+            <div className="mb-6 flex items-center justify-between rounded-lg border border-destructive/20 bg-destructive/10 p-4">
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-amber-100 p-2">
-                  <AlertTriangle className="h-5 w-5 text-amber-600" />
+                <div className="rounded-full bg-destructive/20 p-2">
+                  <AlertTriangle className="h-5 w-5 text-destructive" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-amber-900">Total Tunggakan</p>
-                  <p className="text-2xl font-bold text-amber-700">{formatRupiah(totalTunggakan)}</p>
+                  <p className="text-sm font-medium text-destructive">Total Tunggakan</p>
+                  <p className="text-2xl font-bold text-destructive">{formatRupiah(totalTunggakan)}</p>
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-sm font-medium text-amber-900">{tunggakanCount} Siswa</p>
-                <p className="text-xs text-amber-700">Belum lunas</p>
+                <p className="text-sm font-medium text-destructive">{tunggakanCount} Siswa</p>
+                <p className="text-xs text-destructive/80">Belum lunas</p>
               </div>
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-sm font-medium text-slate-900">5 Tunggakan Terbesar</h4>
+              <h4 className="text-sm font-medium text-foreground">5 Tunggakan Terbesar</h4>
               <div className="space-y-3">
                 {currentMonthSpp
                   .filter(s => s.status !== "lunas")
@@ -181,14 +181,14 @@ export default function DashboardPage() {
                     const student = studentsData.find(s => s.id === spp.siswa_id);
                     const tunggakan = spp.nominal_tagihan - spp.nominal_bayar;
                     return (
-                      <div key={i} className="flex items-center justify-between border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                      <div key={i} className="flex items-center justify-between border-b border-border pb-3 last:border-0 last:pb-0">
                         <div>
-                          <p className="text-sm font-medium text-slate-900">{student?.nama_lengkap}</p>
-                          <p className="text-xs text-slate-500">{student?.kelas}</p>
+                          <p className="text-sm font-medium text-foreground">{student?.nama_lengkap}</p>
+                          <p className="text-xs text-muted-foreground">{student?.kelas}</p>
                         </div>
                         <div className="text-right">
-                          <p className="text-sm font-semibold text-red-600">{formatRupiah(tunggakan)}</p>
-                          <p className="text-xs text-slate-500">1 Bulan</p>
+                          <p className="text-sm font-semibold text-destructive">{formatRupiah(tunggakan)}</p>
+                          <p className="text-xs text-muted-foreground">1 Bulan</p>
                         </div>
                       </div>
                     );

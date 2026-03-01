@@ -29,9 +29,9 @@ export default function TahunAjaranPage() {
   if (currentUser.role !== "Kepala Sekolah") {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] text-center">
-        <Calendar className="h-16 w-16 text-slate-300 mb-4" />
-        <h2 className="text-2xl font-bold text-slate-900 mb-2">Akses Ditolak</h2>
-        <p className="text-slate-500 max-w-md">
+        <Calendar className="h-16 w-16 text-muted mb-4" />
+        <h2 className="text-2xl font-bold text-foreground mb-2">Akses Ditolak</h2>
+        <p className="text-muted-foreground max-w-md">
           Anda tidak memiliki izin untuk mengakses halaman Tahun Ajaran.
         </p>
       </div>
@@ -52,11 +52,11 @@ export default function TahunAjaranPage() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">Tahun Ajaran</h1>
-          <p className="text-sm text-slate-500">Kelola periode akademik untuk {activeUnit.nama}</p>
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">Tahun Ajaran</h1>
+          <p className="text-sm text-muted-foreground">Kelola periode akademik untuk {activeUnit.nama}</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Plus className="mr-2 h-4 w-4" />
             Tambah Tahun Ajaran
           </Button>
@@ -67,7 +67,7 @@ export default function TahunAjaranPage() {
         <CardContent className="p-0">
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
-              <thead className="text-xs text-slate-500 uppercase bg-slate-50 border-b border-slate-200">
+              <thead className="text-xs text-muted-foreground uppercase bg-muted border-b border-border">
                 <tr>
                   <th className="px-6 py-4 font-medium">Tahun Ajaran</th>
                   <th className="px-6 py-4 font-medium">Semester</th>
@@ -78,10 +78,10 @@ export default function TahunAjaranPage() {
               </thead>
               <tbody>
                 {tahunAjaranData.map((ta) => (
-                  <tr key={ta.id} className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
-                    <td className="px-6 py-4 font-medium text-slate-900">{ta.nama}</td>
-                    <td className="px-6 py-4 text-slate-600">{ta.semester}</td>
-                    <td className="px-6 py-4 text-slate-600">
+                  <tr key={ta.id} className="border-b border-border hover:bg-muted/50 transition-colors">
+                    <td className="px-6 py-4 font-medium text-foreground">{ta.nama}</td>
+                    <td className="px-6 py-4 text-muted-foreground">{ta.semester}</td>
+                    <td className="px-6 py-4 text-muted-foreground">
                       {formatDate(ta.mulai)} - {formatDate(ta.selesai)}
                     </td>
                     <td className="px-6 py-4">
@@ -90,7 +90,7 @@ export default function TahunAjaranPage() {
                           <CheckCircle2 className="h-3 w-3" /> Aktif
                         </span>
                       ) : (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted text-foreground">
                           Selesai
                         </span>
                       )}
@@ -111,10 +111,10 @@ export default function TahunAjaranPage() {
                             </DropdownMenuItem>
                           )}
                           <DropdownMenuSeparator />
-                          <DropdownMenuItem className="text-blue-600">
+                          <DropdownMenuItem className="text-primary">
                             <Edit className="mr-2 h-4 w-4" /> Edit
                           </DropdownMenuItem>
-                          <DropdownMenuItem className="text-red-600">
+                          <DropdownMenuItem className="text-destructive">
                             <Trash2 className="mr-2 h-4 w-4" /> Hapus
                           </DropdownMenuItem>
                         </DropdownMenuContent>

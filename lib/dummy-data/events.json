@@ -1,0 +1,65 @@
+[
+  {
+    "id": "EVT-001",
+    "title": "Rapat Evaluasi Bulanan",
+    "date": "2026-03-05",
+    "time": "09:00",
+    "type": "Direncanakan",
+    "description": "Rapat evaluasi kinerja guru dan staf bulan Februari.",
+    "unit_sekolah_id": "UNIT-001"
+  },
+  {
+    "id": "EVT-002",
+    "title": "Ujian Tengah Semester (UTS)",
+    "date": "2026-03-15",
+    "time": "07:30",
+    "type": "Direncanakan",
+    "description": "Pelaksanaan UTS semester genap tahun ajaran 2025/2026.",
+    "unit_sekolah_id": "UNIT-001"
+  },
+  {
+    "id": "EVT-003",
+    "title": "Penerimaan Rapor Sisipan",
+    "date": "2026-03-25",
+    "time": "08:00",
+    "type": "Direncanakan",
+    "description": "Pembagian rapor sisipan kepada wali murid.",
+    "unit_sekolah_id": "UNIT-001"
+  },
+  {
+    "id": "EVT-004",
+    "title": "Workshop Kurikulum Merdeka",
+    "date": "2026-03-01",
+    "time": "08:00",
+    "type": "Berlangsung",
+    "description": "Pelatihan implementasi kurikulum merdeka untuk guru.",
+    "unit_sekolah_id": "UNIT-001"
+  },
+  {
+    "id": "EVT-005",
+    "title": "Kunjungan Dinas Pendidikan",
+    "date": "2026-02-20",
+    "time": "10:00",
+    "type": "Selesai",
+    "description": "Kunjungan monitoring dan evaluasi dari Dinas Pendidikan.",
+    "unit_sekolah_id": "UNIT-001"
+  },
+  {
+    "id": "EVT-006",
+    "title": "Study Tour Kelas XI",
+    "date": "2026-02-25",
+    "time": "06:00",
+    "type": "Selesai",
+    "description": "Kunjungan industri dan kampus di Jakarta.",
+    "unit_sekolah_id": "UNIT-001"
+  },
+  {
+    "id": "EVT-007",
+    "title": "Lomba Cerdas Cermat Antar Kelas",
+    "date": "2026-03-10",
+    "time": "08:00",
+    "type": "Dibatalkan",
+    "description": "Dibatalkan karena bentrok dengan jadwal try out.",
+    "unit_sekolah_id": "UNIT-001"
+  }
+]

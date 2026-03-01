@@ -19,17 +19,15 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [activeUnit, setActiveUnit] = useState<SchoolUnit | null>(null);
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [activeUnit, setActiveUnit] = useState<SchoolUnit | null>(
+    schoolUnitsData.length > 0 ? schoolUnitsData[0] : null
+  );
+  const [currentUser, setCurrentUser] = useState<User | null>(
+    usersData.length > 0 ? usersData[0] : null
+  );
 
   useEffect(() => {
-    // Default to first user and first unit
-    if (usersData.length > 0) {
-      setCurrentUser(usersData[0]);
-    }
-    if (schoolUnitsData.length > 0) {
-      setActiveUnit(schoolUnitsData[0]);
-    }
+    // State is initialized directly
   }, []);
 
   return (

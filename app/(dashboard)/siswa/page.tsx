@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAppContext } from "@/lib/context/app-context";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Search, Plus, Filter, MoreHorizontal, Download, Edit, Trash2 } from "lucide-react";
+import { Search, Plus, Filter, MoreHorizontal, Download, Edit, Trash2, Users } from "lucide-react";
 import studentsData from "@/lib/dummy-data/students.json";
 import { motion } from "motion/react";
 import {

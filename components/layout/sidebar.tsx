@@ -14,7 +14,8 @@ import {
   Settings,
   Menu,
   X,
-  Building2
+  Building2,
+  CalendarDays
 } from "lucide-react";
 import { useAppContext } from "@/lib/context/app-context";
 import { useState } from "react";
@@ -24,6 +25,7 @@ const navigation = [
     group: "UTAMA",
     items: [
       { name: "Dashboard", href: "/", icon: LayoutDashboard, roles: ["Kepala Sekolah", "Staf Keuangan", "Guru"] },
+      { name: "Kalender Kegiatan", href: "/kalender", icon: CalendarDays, roles: ["Kepala Sekolah", "Staf Keuangan", "Guru"] },
     ]
   },
   {

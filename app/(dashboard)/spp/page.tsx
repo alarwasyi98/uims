@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAppContext } from "@/lib/context/app-context";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Search, Plus, Filter, MoreHorizontal, Download, Edit, Trash2, CheckCircle2, AlertCircle, Clock } from "lucide-react";
+import { Search, Plus, Filter, MoreHorizontal, Download, Edit, Trash2, CheckCircle2, AlertCircle, Clock, CreditCard } from "lucide-react";
 import sppData from "@/lib/dummy-data/spp_records.json";
 import studentsData from "@/lib/dummy-data/students.json";
 import { motion } from "motion/react";

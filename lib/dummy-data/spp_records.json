@@ -1,0 +1,62 @@
+[
+  {
+    "id": "SPP-001",
+    "siswa_id": "STD-001",
+    "bulan": "Januari",
+    "tahun": 2025,
+    "nominal_tagihan": 350000,
+    "nominal_bayar": 350000,
+    "status": "lunas",
+    "tanggal_bayar": "2025-01-05",
+    "metode_bayar": "transfer",
+    "dicatat_oleh": "user_keuangan_001"
+  },
+  {
+    "id": "SPP-002",
+    "siswa_id": "STD-002",
+    "bulan": "Januari",
+    "tahun": 2025,
+    "nominal_tagihan": 350000,
+    "nominal_bayar": 350000,
+    "status": "lunas",
+    "tanggal_bayar": "2025-01-10",
+    "metode_bayar": "tunai",
+    "dicatat_oleh": "user_keuangan_001"
+  },
+  {
+    "id": "SPP-003",
+    "siswa_id": "STD-003",
+    "bulan": "Januari",
+    "tahun": 2025,
+    "nominal_tagihan": 350000,
+    "nominal_bayar": 0,
+    "status": "tunggakan",
+    "tanggal_bayar": null,
+    "metode_bayar": null,
+    "dicatat_oleh": null
+  },
+  {
+    "id": "SPP-004",
+    "siswa_id": "STD-004",
+    "bulan": "Januari",
+    "tahun": 2025,
+    "nominal_tagihan": 350000,
+    "nominal_bayar": 150000,
+    "status": "sebagian",
+    "tanggal_bayar": "2025-01-15",
+    "metode_bayar": "transfer",
+    "dicatat_oleh": "user_keuangan_001"
+  },
+  {
+    "id": "SPP-005",
+    "siswa_id": "STD-005",
+    "bulan": "Januari",
+    "tahun": 2025,
+    "nominal_tagihan": 250000,
+    "nominal_bayar": 250000,
+    "status": "lunas",
+    "tanggal_bayar": "2025-01-02",
+    "metode_bayar": "qris",
+    "dicatat_oleh": "user_keuangan_001"
+  }
+]

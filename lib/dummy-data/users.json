@@ -1,0 +1,26 @@
+[
+  {
+    "id": "USR-001",
+    "nama": "Ustadz Ahmad Fauzi, M.Pd.",
+    "email": "kepsek@alfalah.sch.id",
+    "role": "Kepala Sekolah",
+    "unit_access_ids": ["UNIT-001", "UNIT-002", "UNIT-003"],
+    "active": true
+  },
+  {
+    "id": "USR-002",
+    "nama": "Ibu Siti Rohmah, S.E.",
+    "email": "keuangan@alfalah.sch.id",
+    "role": "Staf Keuangan",
+    "unit_access_ids": ["UNIT-001", "UNIT-002", "UNIT-003"],
+    "active": true
+  },
+  {
+    "id": "USR-003",
+    "nama": "Bapak Rizky Maulana, S.Pd.",
+    "email": "rizky@alfalah.sch.id",
+    "role": "Guru",
+    "unit_access_ids": ["UNIT-001"],
+    "active": true
+  }
+]

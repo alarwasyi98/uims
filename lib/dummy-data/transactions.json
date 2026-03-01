@@ -1,0 +1,62 @@
+[
+  {
+    "id": "TRX-001",
+    "tipe": "pengeluaran",
+    "kategori": "Gaji Guru",
+    "deskripsi": "Pembayaran gaji bulan Januari 2025",
+    "nominal": 12500000,
+    "tanggal": "2025-01-28",
+    "unit_sekolah_id": "UNIT-001",
+    "metode": "transfer",
+    "dibuat_oleh": "user_keuangan_001",
+    "created_at": "2025-01-28T09:30:00Z"
+  },
+  {
+    "id": "TRX-002",
+    "tipe": "pemasukan",
+    "kategori": "SPP",
+    "deskripsi": "Penerimaan SPP Kelas X IPA 1",
+    "nominal": 3500000,
+    "tanggal": "2025-01-05",
+    "unit_sekolah_id": "UNIT-001",
+    "metode": "transfer",
+    "dibuat_oleh": "user_keuangan_001",
+    "created_at": "2025-01-05T10:15:00Z"
+  },
+  {
+    "id": "TRX-003",
+    "tipe": "pengeluaran",
+    "kategori": "Operasional",
+    "deskripsi": "Pembayaran Listrik & Air Januari",
+    "nominal": 1500000,
+    "tanggal": "2025-01-10",
+    "unit_sekolah_id": "UNIT-001",
+    "metode": "transfer",
+    "dibuat_oleh": "user_keuangan_001",
+    "created_at": "2025-01-10T08:45:00Z"
+  },
+  {
+    "id": "TRX-004",
+    "tipe": "pengeluaran",
+    "kategori": "Sarana Prasarana",
+    "deskripsi": "Pembelian Spidol dan Tinta",
+    "nominal": 250000,
+    "tanggal": "2025-01-12",
+    "unit_sekolah_id": "UNIT-001",
+    "metode": "tunai",
+    "dibuat_oleh": "user_keuangan_001",
+    "created_at": "2025-01-12T13:20:00Z"
+  },
+  {
+    "id": "TRX-005",
+    "tipe": "pemasukan",
+    "kategori": "Donasi",
+    "deskripsi": "Sumbangan Wali Murid",
+    "nominal": 5000000,
+    "tanggal": "2025-01-20",
+    "unit_sekolah_id": "UNIT-001",
+    "metode": "transfer",
+    "dibuat_oleh": "user_keuangan_001",
+    "created_at": "2025-01-20T11:00:00Z"
+  }
+]

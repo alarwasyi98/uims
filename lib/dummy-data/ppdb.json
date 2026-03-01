@@ -1,0 +1,32 @@
+[
+  {
+    "id": "PPDB-001",
+    "unit_sekolah_id": "UNIT-001",
+    "nama_lengkap": "Budi Gunawan",
+    "asal_sekolah": "SMPN 1 Bandung",
+    "status": "Menunggu Verifikasi",
+    "tanggal_daftar": "2025-02-01",
+    "nama_wali": "Gunawan",
+    "no_hp_wali": "081122334455"
+  },
+  {
+    "id": "PPDB-002",
+    "unit_sekolah_id": "UNIT-001",
+    "nama_lengkap": "Siti Aisyah",
+    "asal_sekolah": "MTs Al-Falah",
+    "status": "Diterima",
+    "tanggal_daftar": "2025-01-15",
+    "nama_wali": "Ahmad",
+    "no_hp_wali": "089988776655"
+  },
+  {
+    "id": "PPDB-003",
+    "unit_sekolah_id": "UNIT-002",
+    "nama_lengkap": "Andi Saputra",
+    "asal_sekolah": "SDN 5 Bandung",
+    "status": "Ditolak",
+    "tanggal_daftar": "2025-01-20",
+    "nama_wali": "Saputra",
+    "no_hp_wali": "087766554433"
+  }
+]

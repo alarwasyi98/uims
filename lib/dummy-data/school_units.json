@@ -1,0 +1,35 @@
+[
+  {
+    "id": "UNIT-001",
+    "org_id": "ORG-001",
+    "nama": "Madrasah Aliyah Al-Falah",
+    "jenjang": "MA",
+    "npsn": "12345678",
+    "alamat": "Jl. Pesantren No. 1, Bandung",
+    "no_telepon": "022-1234567",
+    "tarif_spp": 350000,
+    "logo_url": "/assets/logo-ma-alfalah.png"
+  },
+  {
+    "id": "UNIT-002",
+    "org_id": "ORG-001",
+    "nama": "Madrasah Tsanawiyah Al-Falah",
+    "jenjang": "MTs",
+    "npsn": "87654321",
+    "alamat": "Jl. Pesantren No. 2, Bandung",
+    "no_telepon": "022-7654321",
+    "tarif_spp": 250000,
+    "logo_url": "/assets/logo-mts-alfalah.png"
+  },
+  {
+    "id": "UNIT-003",
+    "org_id": "ORG-001",
+    "nama": "Madrasah Ibtidaiyah Al-Falah",
+    "jenjang": "MI",
+    "npsn": "11223344",
+    "alamat": "Jl. Pesantren No. 3, Bandung",
+    "no_telepon": "022-1122334",
+    "tarif_spp": 150000,
+    "logo_url": "/assets/logo-mi-alfalah.png"
+  }
+]

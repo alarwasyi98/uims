@@ -1,0 +1,72 @@
+[
+  {
+    "id": "STD-001",
+    "nis": "2024001",
+    "nama_lengkap": "Muhammad Farhan Al-Ghifari",
+    "kelas": "X IPA 1",
+    "jenjang": "MA",
+    "unit_sekolah_id": "UNIT-001",
+    "status": "aktif",
+    "tahun_masuk": "2024",
+    "nama_ayah": "Ahmad Ghifari",
+    "nama_ibu": "Siti Aminah",
+    "no_hp_wali": "08123456789",
+    "alamat": "Jl. Merdeka No. 12, Bandung"
+  },
+  {
+    "id": "STD-002",
+    "nis": "2024002",
+    "nama_lengkap": "Aisyah Putri Azzahra",
+    "kelas": "X IPS 2",
+    "jenjang": "MA",
+    "unit_sekolah_id": "UNIT-001",
+    "status": "aktif",
+    "tahun_masuk": "2024",
+    "nama_ayah": "Budi Santoso",
+    "nama_ibu": "Rina Wati",
+    "no_hp_wali": "08198765432",
+    "alamat": "Jl. Pahlawan No. 45, Bandung"
+  },
+  {
+    "id": "STD-003",
+    "nis": "2023001",
+    "nama_lengkap": "Rizky Ramadhan",
+    "kelas": "XI IPA 1",
+    "jenjang": "MA",
+    "unit_sekolah_id": "UNIT-001",
+    "status": "aktif",
+    "tahun_masuk": "2023",
+    "nama_ayah": "Hendra",
+    "nama_ibu": "Susi",
+    "no_hp_wali": "08561234567",
+    "alamat": "Jl. Sudirman No. 8, Bandung"
+  },
+  {
+    "id": "STD-004",
+    "nis": "2022001",
+    "nama_lengkap": "Fatimah Az-Zahra",
+    "kelas": "XII IPS 1",
+    "jenjang": "MA",
+    "unit_sekolah_id": "UNIT-001",
+    "status": "aktif",
+    "tahun_masuk": "2022",
+    "nama_ayah": "Ali",
+    "nama_ibu": "Khadijah",
+    "no_hp_wali": "082111222333",
+    "alamat": "Jl. Diponegoro No. 10, Bandung"
+  },
+  {
+    "id": "STD-005",
+    "nis": "2024003",
+    "nama_lengkap": "Bima Arya",
+    "kelas": "VII A",
+    "jenjang": "MTs",
+    "unit_sekolah_id": "UNIT-002",
+    "status": "aktif",
+    "tahun_masuk": "2024",
+    "nama_ayah": "Cahyo",
+    "nama_ibu": "Dewi",
+    "no_hp_wali": "083344556677",
+    "alamat": "Jl. Veteran No. 5, Bandung"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "TCH-001",
+    "unit_sekolah_id": "UNIT-001",
+    "nuptk": "1234567890123456",
+    "nama_lengkap": "Bapak Rizky Maulana, S.Pd.",
+    "jabatan": "Guru & Wali Kelas",
+    "mata_pelajaran": ["Matematika", "Fisika"],
+    "status": "aktif",
+    "no_hp": "08987654321",
+    "email": "rizky.maulana@alfalah.sch.id"
+  },
+  {
+    "id": "TCH-002",
+    "unit_sekolah_id": "UNIT-001",
+    "nuptk": "9876543210987654",
+    "nama_lengkap": "Ibu Nurul Hidayah, Lc.",
+    "jabatan": "Guru",
+    "mata_pelajaran": ["Bahasa Arab", "PAI"],
+    "status": "aktif",
+    "no_hp": "08123456789",
+    "email": "nurul.hidayah@alfalah.sch.id"
+  },
+  {
+    "id": "TCH-003",
+    "unit_sekolah_id": "UNIT-002",
+    "nuptk": "1122334455667788",
+    "nama_lengkap": "Bapak Ahmad Fauzi, M.Pd.",
+    "jabatan": "Kepala Sekolah",
+    "mata_pelajaran": ["PKn"],
+    "status": "aktif",
+    "no_hp": "085566778899",
+    "email": "ahmad.fauzi@alfalah.sch.id"
+  }
+]
